@@ -23,16 +23,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
-    activationCode: {
-      type: String,
-      require: true,
-      default: null,
-    },
-    isActivated: {
-      type: Boolean,
-      require: true,
-      default: false,
-    },
   },
   {
     timestamps: true,

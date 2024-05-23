@@ -18,7 +18,6 @@ exports.register = async (req, res, next) => {
     const newUser = await User.create({
       ...req.body,
       password: hashedPassword,
-      activationCode,
     });
 
     const token = jwt.sign({ _id: newUser._id }, "secretkey123", {
@@ -34,7 +33,6 @@ exports.register = async (req, res, next) => {
         name: newUser.name,
         email: newUser.email,
         role: newUser.role,
-        activationCode: newUser.activationCode,
       },
     });
   } catch (error) {
