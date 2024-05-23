@@ -1,5 +1,4 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const db = require("./config/db");
@@ -8,7 +7,7 @@ const router = require("./routes/authRoute");
 
 require("dotenv").config();
 
-const PORT = process.env.PORT || "";
+const PORT = process.env.PORT || "8001";
 
 const app = express();
 
@@ -20,9 +19,13 @@ db();
 
 app.use("/user", router);
 
+app.get('/',(req,res)=>{
+  res.status(200).json({message:"jdhsfjkh"})
+})
+
+
 // GLOBAL ERROR HANDLER
 app.use((err, req, res, next) => {
-  // Fix parameter order for error handling middleware
   err.statusCode = err.statusCode || 500;
   err.status = err.status || "error";
 
