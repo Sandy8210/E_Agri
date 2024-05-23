@@ -4,7 +4,9 @@ import { Navigate } from "react-router-dom";
 const AuthProvider = (props) => {
   const auth = useAuth();
 
-  if (auth.user) {
+  const token = localStorage.getItem("token");
+
+  if (auth.user || token) {
     return <>{props.children}</>;
   } else {
     return <Navigate to="/login" />;
