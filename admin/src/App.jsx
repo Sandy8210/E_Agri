@@ -6,10 +6,13 @@ import Add_item from "./pages/Add_item/Add_item";
 import List_item from "./pages/List_item/List_item";
 import Order from "./pages/Order/Order";
 import UserData from "./pages/UserData/UserData";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
     <div>
+      <ToastContainer />
       <Navbar />
       <hr />
       <Sidebar />
