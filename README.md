@@ -21,6 +21,7 @@
         -> Product price
         -> Product offer
         -> Product description
+        -> Product category
 
     => List Product
 
