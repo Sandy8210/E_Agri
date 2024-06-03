@@ -36,6 +36,11 @@
 
 # Admin Dependencies : 
 
+    => npm i react-router-dom
+    => npm i react-icons
+    => npm i axios
+    => npm i react-toastify
+
 
 # Server Dependencies : 
 

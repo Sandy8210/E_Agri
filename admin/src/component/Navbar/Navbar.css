@@ -1,0 +1,35 @@
+.sideNav {
+  width: 200px;
+  position: absolute;
+  height: 86vh;
+  background-color: #ddd;
+  padding: 0 30px;
+  padding-right: 0;
+  transition: all 0.8s;
+  left: -100%;
+}
+
+.sideNav.active {
+  left: 0;
+}
+
+.sideNav a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sideNav a:hover,
+.sideNav a.active {
+  background-color: #242424;
+  color: #ddd;
+}
+
+.navData {
+  margin: 10px 0;
+  margin-top: 0;
+}

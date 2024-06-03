@@ -1,0 +1,11 @@
+header {
+  padding: 30px;
+  background-color: #ddd;
+  height: 40px;
+  font-size: 22px;
+  color: black;
+}
+
+.logo {
+  cursor: pointer;
+}

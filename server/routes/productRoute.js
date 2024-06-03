@@ -1,5 +1,9 @@
 import express from "express";
-import { addProduct, test } from "../controller/productController.js";
+import {
+  addProduct,
+  listProduct,
+  test,
+} from "../controller/productController.js";
 import multer from "multer";
 import fs from "fs";
 import path from "path";
@@ -27,5 +31,8 @@ const upload = multer({ storage: storage });
 
 // ADD PRODUCT
 productRouter.post("/add", upload.single("product_image"), addProduct);
+
+// LIST PRODUCT
+productRouter.get("/list", listProduct);
 
 export default productRouter;
